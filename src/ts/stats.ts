@@ -1,4 +1,4 @@
-const ANIMATION_DURATION = 1500
+const ANIMATION_DURATION = 1200
 const ANIMATION_TICK= 30
 
 async function animateStats() {
@@ -38,7 +38,15 @@ function animateOneStat(elementId: string, value: number) {
 }
 
 function checkScrollForAnimation() {
-    window.addEventListener("scroll", animateOnScroll);
+    const element = document.querySelector("#stats") as Element
+    const position = element.getBoundingClientRect()
+
+    // Check if numbers are already visible
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+        animateStats()
+    } else {
+        window.addEventListener("scroll", animateOnScroll);
+    }
 }
 
 function animateOnScroll() {
