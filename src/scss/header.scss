@@ -1,0 +1,56 @@
+header[role=banner] {
+  nav {
+    height: 4rem;
+  }
+
+  .logo {
+    width: 4rem;
+  }
+
+}
+
+.main-header {
+  height: 45rem;
+  color: white;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../assets/backgrounds/paralympics-ceremony.avif") center center no-repeat white;
+    background-size: cover;
+    filter: brightness(30%)
+  }
+
+  .lead {
+    color: #9c9c9c;
+  }
+
+  a {
+    color: #252525;
+    border-color: #252525;
+  }
+}
+
+#countDown {
+  .countDownTitle {
+    font-size: 1.5rem;
+  }
+  .countDownDate {
+    font-size: 1.3rem;
+  }
+
+  .timePart {
+    .timePartValue {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .timePartLabel {
+      font-size: 0.7rem;
+    }
+  }
+}

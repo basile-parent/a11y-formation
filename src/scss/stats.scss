@@ -1,0 +1,16 @@
+@import "bootstrap/scss/bootstrap";
+
+#stats {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--bs-blue);
+
+  span {
+    display: block;
+  }
+
+  .value {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Jeux paralympiques - Lille</title>
+</head>
+<body>
+
+<header role="banner" class="w-100 position-absolute">
+    <div class="position-relative container-fluid h-100 w-100 mx-0 py-2 d-flex flex-column">
+        <nav class="flex-grow-0 d-flex"
+             aria-label="Navigation principale"
+        >
+            <ul class="list-inline h-100 flex-1 d-flex align-items-center justify-content-start">
+                <li class="list-inline-item">
+                    <a class="btn btn-primary" href="#">Programme</a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn btn-primary" href="#">Résultats</a>
+                </li>
+            </ul>
+
+            <div class="logo flex-grow-0 h-100">
+                <img src="assets/backgrounds/emblem-para.svg" alt="Logo version 23 (corrigé) - à revoir"
+                     class="img-fluid"
+                />
+            </div>
+
+            <ul class="list-inline flex-1 flex-shrink-0 h-100 d-flex align-items-center justify-content-end">
+                <li class="list-inline-item">
+                    <a class="btn btn-primary" href="#">Billets</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <article
+            class="main-header col-md-6 p-lg-5 w-100 d-flex flex-column align-items-center justify-content-center text-center position-relative">
+        <h1 class="display-4 fw-bold">Jeux paralympiques<br/> Lille <span class="injectGameDateYear"></span></h1>
+        <p class="lead">
+            Suivez les résultats en direct, revivez les victoires, partagez les émotions.
+        </p>
+        <a class="btn btn-outline-secondary btn-light" href="#">Plus d'infos</a>
+    </article>
+
+    <section id="countDown">
+        <p class="fw-bold text-center countDownTitle my-1">Jeux paralympiques de Lille <span
+                class="injectGameDateYear"></span></p>
+        <time class="text-center d-block countDownDate"><span class="injectGameDateLocaleWithoutYear"></span> - <span
+                class="injectGameEndDateLocale"></span></time>
+
+        <time class="d-flex align-items-center justify-content-center">
+            <span class="timePart d-flex flex-column align-items-center justify-content-center">
+                <span class="timePartValue injectCountdownDays"></span>
+                <span class="timePartLabel">jours</span>
+            </span>
+            <span class="timePart separator mx-2 d-flex flex-column justify-content-start">
+                <span class="timePartValue">:</span>
+                <span>&nbsp;</span>
+            </span>
+            <span class="timePart d-flex flex-column align-items-center justify-content-center">
+                <span class="timePartValue injectCountdownHours"></span>
+                <span class="timePartLabel">heures</span>
+            </span>
+            <span class="timePart separator mx-2 d-flex flex-column justify-content-start">
+                <span class="timePartValue">:</span>
+                <span>&nbsp;</span>
+            </span>
+            <span class="timePart d-flex flex-column align-items-center justify-content-center">
+                <span class="timePartValue injectCountdownMinutes"></span>
+                <span class="timePartLabel">minutes</span>
+            </span>
+            <span class="timePart separator mx-2 d-flex flex-column justify-content-start">
+                <span class="timePartValue">:</span>
+                <span>&nbsp;</span>
+            </span>
+            <span class="timePart d-flex flex-column align-items-center justify-content-center">
+                <span class="timePartValue injectCountdownSeconds"></span>
+                <span class="timePartLabel">secondes</span>
+            </span>
+        </time>
+    </section>
+
+    <section id="blog" class="mt-3 content">
+        <p id="blog-title">Dernières actualités</p>
+
+        <article class="d-flex gap-4 py-4">
+            <img src="/assets/articles/biking.avif" alt=""/>
+            <div class="article-details">
+                <p class="h3">
+                    Para cyclisme sur piste : les Jeux de Paris 2024, une compétition sans courses en peloton
+                </p>
+                <a href="#" class="float-end">Suite...</a>
+            </div>
+        </article>
+
+        <article class="d-flex gap-4 py-4">
+            <img src="/assets/articles/goalball.avif" alt=""/>
+            <div class="article-details">
+                <p class="h3">
+                    Le goalball, un para sport qui se joue sous silence
+                </p>
+                <a href="#" class="float-end">Suite...</a>
+            </div>
+        </article>
+
+        <article class="d-flex gap-4 py-4">
+            <img src="/assets/articles/boccia.avif" alt=""/>
+            <div class="article-details">
+                <p class="h3">
+                    Boccia : de l’Egypte antique aux équipements modernes
+                </p>
+                <a href="#" class="float-end">Suite...</a>
+            </div>
+        </article>
+    </section>
+
+    <section id="stats" class="content container">
+        <div class="row">
+            <article class="col-md-4 col-xs-12 mb-4">
+                <span class="value" id="trials-count" data-value="97">97</span>
+                <span>épreuves</span>
+            </article>
+            <article class="col-md-4 col-xs-12 mb-4">
+                <span class="value" id="medals-count" data-value="291">291</span>
+                <span>médailles</span>
+            </article>
+            <article class="col-md-4 col-xs-12 mb-4">
+                <span class="value" id="spectators-count" data-value="180000">180000</span>
+                <span>spectateurs</span>
+            </article>
+        </div>
+    </section>
+
+    <section id="history" class="content">
+        <h2>Un peu d'histoire</h2>
+        <p>
+            <a href="https://fr.wikipedia.org/wiki/Ludwig_Guttmann">M. Ludwig Guttmann</a>, médecin neurologue de
+            l'hôpital de Stoke Mandeville dans le comté de Buckinghamshire près de Londres, eut l'idée d'organiser
+            dès 1948 sur le terrain de l’hôpital les premiers « Jeux mondiaux des chaises-roulantes et des amputés »
+            (« World Wheelchair and Amputee Games »). Connus plus tard sous le
+            nom de « Jeux de Stoke Mandeville », ils étaient destinés à réhabiliter par la pratique physique des
+            victimes et anciens combattants de la Seconde Guerre mondiale devenus paraplégiques. Deux équipes d’anciens
+            combattants ont alors participé à une unique épreuve, le tir à l’arc.
+        </p>
+
+        <p>
+            Les 9e jeux de Stoke-Mandeville eurent lieu à Rome en 1960 une semaine après les Jeux olympiques d'été
+            de 1960, et l'on considère qu'il s'agit des premiers Jeux paralympiques. Les premiers Jeux paralympiques
+            d'hiver eurent lieu à Örnsköldsvik en Suède en 1976.
+        </p>
+
+        <p>
+            Depuis les Jeux paralympiques d’été de Séoul en 1988, Jeux paralympiques sont organisés dans la même ville
+            que les Jeux olympiques et se déroulent après ceux-ci.
+        </p>
+
+        <p>
+            Les personnes atteintes de surdité peuvent prendre part aux <a href="https://www.deaflympics.com/"
+                                                                           target="_blank">Deaflympics</a>.
+            Les personnes atteintes d'un handicap mental pouvaient aussi participer aux Jeux olympiques spéciaux
+            jusqu'à leur réintégration en 2012 aux Jeux paralympiques d'été de 2012 (après en avoir été
+            exclus depuis 2000).
+        </p>
+    </section>
+
+    <section id="shop" class="px-5 pt-4 pb-5">
+        <h2 class="mb-4">Boutique officielle</h2>
+
+        <div class="container-fluid">
+            <div id="shop-items" class="row">
+                <article class="col-2 d-lg-block d-none">
+                    <div class="card shadow h-100 position-relative">
+                        <img class="card-img-top" src="/assets/shop/porte-clefs.avif" alt="Porte-clef">
+
+                        <span class="price position-absolute bg-light border border-secondary top-0 mt-2 end-0 me-2 px-2 py-1 rounded fw-bold">
+                        <span>
+                            <sup>€</sup>
+                            <span>9</span>
+                            <sup>00</sup>
+                        </span>
+                    </span>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title">Porte-clés Jeux Paralympiques de Paris 2024 - Fabriqué en France -
+                                Doré</p>
+                            <p class="card-text flex-1">Impressionnez votre moitié en devenant médaille d'or en
+                                ouverture de
+                                porte</p>
+                            <div class="text-center">
+                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <p>Stock: <img src="/assets/shop/green-light.png" alt="Disponible" class="stock-icon"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-4 col-lg-2">
+                    <div class="card shadow h-100 position-relative">
+                        <img class="card-img-top" src="/assets/shop/clitorix.webp"
+                             alt="Clitorix - la mascotte officielle">
+
+                        <span class="price position-absolute bg-light border border-secondary top-0 mt-2 end-0 me-2 px-2 py-1 rounded fw-bold">
+                        <span>
+                            <sup>€</sup>
+                            <span>12</span>
+                            <sup>00</sup>
+                        </span>
+                    </span>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title">Mascotte pince sac Paralympiques Paris 2024 10cm</p>
+                            <p class="card-text flex-1">Pour accrocher fièrement à votre sac à dos stabiloté "Korn"</p>
+                            <div class="text-center">
+                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <p>Stock: <img src="/assets/shop/red-light.png" alt="Rupture" class="stock-icon"/></p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-4 col-lg-2">
+                    <div class="card shadow h-100 position-relative">
+                        <img class="card-img-top" src="/assets/shop/lunettes.jpg" alt="Lunettes Tour Eiffel">
+
+                        <span class="price position-absolute bg-light border border-secondary top-0 mt-2 end-0 me-2 px-2 py-1 rounded fw-bold">
+                        <span>
+                            <sup>€</sup>
+                            <span>17</span>
+                            <sup>00</sup>
+                        </span>
+                    </span>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title">Lunettes tricolores Tour Eiffel - Taille unique</p>
+                            <p class="card-text flex-1">Soyez branché, patriote ET à l'abri de la cataracte</p>
+                            <div class="text-center">
+                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <p>Stock: <img src="/assets/shop/green-light.png" alt="Disponible" class="stock-icon"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-4 col-lg-2">
+                    <div class="card shadow h-100 position-relative">
+                        <img class="card-img-top" src="/assets/shop/pins.avif" alt="Pin's officiel jeux paralympics">
+
+                        <span class="price position-absolute bg-light border border-secondary top-0 mt-2 end-0 me-2 px-2 py-1 rounded fw-bold">
+                        <span>
+                            <sup>€</sup>
+                            <span>8</span>
+                            <sup>00</sup>
+                        </span>
+                    </span>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title">Pin 's de l'équipe paralympique de France</p>
+                            <p class="card-text flex-1">Soyez cool et branché grâce à LA référence de l'accessoire
+                                tendance du
+                                moment</p>
+                            <div class="text-center">
+                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <p>Stock: <img src="/assets/shop/green-light.png" alt="Disponible" class="stock-icon"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-2 d-lg-block d-none">
+                    <div class="card shadow h-100 position-relative">
+                        <img class="card-img-top" src="/assets/shop/velo-couche.avif" alt="Médaillon paracyclisme">
+
+                        <span class="price position-absolute bg-light border border-secondary top-0 mt-2 end-0 me-2 px-2 py-1 rounded fw-bold">
+                            <span>
+                                <sup>€</sup>
+                                <span>10</span>
+                                <sup>00</sup>
+                            </span>
+                        </span>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-title">Médaillon Sport Alphabet Jeux Olympiques Paris 2024 C -
+                                Paracyclisme</p>
+                            <p class="card-text flex-1">Un excellent ajout à votre maison, se placera idéalement entre
+                                la tête
+                                de
+                                cerf empayée et les cendres de mamie.</p>
+                            <div class="text-center">
+                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <p>Stock: <img src="/assets/shop/green-light.png" alt="Disponible" class="stock-icon"/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="form" class="content">
+        <h2>Devenez partenaire</h2>
+        <form>
+            <p>
+                Les Jeux Olympiques / Paralympiques offrent l'une des plateformes marketing internationales
+                les plus efficaces au monde, en touchant des milliards de personnes dans plus de 200 pays et
+                territoires répartis sur toute la planète.
+            </p>
+
+            <div class="form-group">
+                <p class="mt-3 mb-0">Adresse mail</p>
+                <input type="email" class="form-control" id="email" placeholder="votre.nom@exemple.com"/>
+            </div>
+            <div class="form-group">
+                <p class="mt-3 mb-0">Type de partenariat</p>
+                <select class="form-select" id="partnership-type">
+                    <option selected>Choisissez un type de partenariat</option>
+                    <option value="platinium">Platinium</option>
+                    <option value="premium">Premium</option>
+                    <option value="gold">Gold</option>
+                    <option value="buvette">Buvette PMU</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p class="mt-3 mb-0">Votre message</p>
+                <textarea id="message" rows="3" class="form-control"></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary my-3 px-5">OK</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer role="contentinfo">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-6 text-center">
+                <img src="assets/backgrounds/emblem-para.svg" alt="" class="img-fluid"/>
+                <p class="mt-3">Téléchargez l'application Lille <span class="injectGameDateYear"></span></p>
+
+                <div>
+                    <img alt="Télécharger l’application Android" loading="lazy" src="/assets/ornaments/google-play-badge.png" />
+                    <img alt="Télécharger l’application IOS" loading="lazy" src="/assets/ornaments/app-store-badge.svg" />
+                </div>
+            </div>
+            <div class="col-2">
+                <p class="title fw-bold">Jeux paralympiques</p>
+
+                <p><a href="#">Calendrier</a></p>
+                <p><a href="#">Sports</a></p>
+                <p><a href="#">Classification paralympique</a></p>
+                <p><a href="#">Sites</a></p>
+            </div>
+            <div class="col-2">
+                <p class="title fw-bold">Spectateurs</p>
+
+                <p><a href="#">Infos spectateurs</a></p>
+                <p><a href="#">Billeterie</a></p>
+                <p><a href="#">La boutique des jeux</a></p>
+                <p><a href="#">Une question ?</a></p>
+            </div>
+            <div class="col-2">
+                <p class="title fw-bold">Relais de la flamme paralympique</p>
+
+                <p><a href="#">Parcours</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="/ts/main.ts"></script>
+<script type="module" src="/ts/countdown.ts"></script>
+<script type="module" src="/ts/stats.ts"></script>
+</body>
+</html>
