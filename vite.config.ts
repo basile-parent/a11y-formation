@@ -5,7 +5,8 @@ export default defineConfig({
     root: path.resolve(__dirname, "src"),
     base: "/a11y-formation/",
     build: {
-        outDir: '../dist'
+        outDir: '../dist',
+        emptyOutDir: true,
     },
     resolve: {
         alias: {
