@@ -1,5 +1,5 @@
 #shop {
-  background: url("/assets/backgrounds/background-3-bands.png") no-repeat center center rgb(9,51,128);
+  background: url("/assets/backgrounds/background-3-bands.png") no-repeat center center rgb(9, 51, 128);
   background-size: cover;
   color: white;
 
@@ -10,6 +10,7 @@
   .col-2 {
     width: 20%;
   }
+
   @media (min-width: 992px) {
     .col-lg-2 {
       width: 20%;
@@ -29,8 +30,28 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
     .stock-icon {
       height: 1rem;
+    }
+
+    .card-img-promo {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      top: 30px;
+      left: 10px;
+      transform: rotateZ(-30deg);
+    }
+
+    .price {
+      & > span {
+        display: block;
+      }
+
+      .striked-price {
+        text-decoration: line-through;
+      }
     }
   }
 
