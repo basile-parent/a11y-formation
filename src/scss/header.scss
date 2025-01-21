@@ -44,13 +44,15 @@ header[role=banner] {
     font-size: 1.3rem;
   }
 
-  .timePart {
-    .timePartValue {
-      font-weight: bold;
-      font-size: 2rem;
-    }
-    .timePartLabel {
-      font-size: 0.7rem;
+  table {
+    .timePart {
+      &.timePartValue {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      &.timePartLabel {
+        font-size: 0.7rem;
+      }
     }
   }
 }
