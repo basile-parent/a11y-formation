@@ -30,11 +30,19 @@ export default defineConfig({
             targets: [
                 {
                     src: "js/*",
-                    dest: 'js',
+                    dest: "js",
                 },
                 {
                     src: "img/*",
-                    dest: 'img',
+                    dest: "img",
+                },
+                {
+                    src: "css/highlight/highlight.pack.js",
+                    dest: "css/highlight",
+                },
+                {
+                    src: "css/fonts/*",
+                    dest: "fonts",
                 },
             ],
         }),
