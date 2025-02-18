@@ -1,3 +1,4 @@
+import path from "path"
 import { defineConfig } from "vite"
 import { viteStaticCopy } from "vite-plugin-static-copy"
 
@@ -18,7 +19,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy"
 // }
 
 export default defineConfig({
-    root: __dirname,
+    root: path.resolve(__dirname, "src/slides"),
     base: "/slides/",
     build: {
         outDir: "../../dist/slides",

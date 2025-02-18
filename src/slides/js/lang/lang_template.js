@@ -75,7 +75,7 @@ var lang={
 	},
 	// Shutter left
 	Eleft: {
-		help: 'Value texte of option't'
+		help: 'Value texte of option'
 	},
 	// Shutter rigth
 	Eright: {

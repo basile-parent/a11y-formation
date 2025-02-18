@@ -4,15 +4,27 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite ./src/site",
-    "build": "tsc && vite build",
+    "dev:site": "vite ./src/site",
+    "dev:slides": "run-p slides:*",
+    "slides:grunt": "grunt --base src/slides --gruntfile src/slides/Gruntfile.js watch",
+    "slides:dev": "vite ./src/slides",
+    "build": "run-s build:site build:slides",
+    "build:site": "tsc && vite build -c vite.config.site.ts",
+    "build:slides": "grunt --base src/slides --gruntfile src/slides/Gruntfile.js && vite build -c vite.config.slides.ts",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^22.13.4",
     "sass": "^1.32.13",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "grunt": "^1.6.1",
+    "grunt-combine-media-queries": "^1.0.20",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-css": "^0.5.4",
+    "grunt-myth": "^1.1.0",
+    "npm-run-all": "^4.1.5",
+    "vite-plugin-static-copy": "^2.2.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
