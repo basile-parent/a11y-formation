@@ -2,10 +2,10 @@ import path from "path"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-    root: path.resolve(__dirname, "src"),
+    root: path.resolve(__dirname, "src/site"),
     base: "/a11y-formation/",
     build: {
-        outDir: '../dist',
+        outDir: '../../dist',
         emptyOutDir: true,
     },
     resolve: {

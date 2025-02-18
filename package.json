@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev:site": "vite ./src/site",
+    "dev:slides": "vite ./src/slides",
+    "build:site": "tsc && vite build -c vite.config.site.ts",
+    "build:slides": "tsc && vite build -c vite.config.slides.ts",
     "preview": "vite preview"
   },
   "devDependencies": {
