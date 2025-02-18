@@ -1,5 +1,5 @@
-import path from "path"
 import { defineConfig } from "vite"
+import { viteStaticCopy } from "vite-plugin-static-copy"
 
 // import { defineConfig, Plugin } from "vite"
 // import {NormalizedOutputOptions, OutputBundle} from "rollup"
@@ -18,12 +18,26 @@ import { defineConfig } from "vite"
 // }
 
 export default defineConfig({
-    root: path.resolve(__dirname, "src/slides"),
+    root: __dirname,
     base: "/slides/",
     build: {
         outDir: "../../dist/slides",
         emptyOutDir: true,
     },
+    plugins: [
+        viteStaticCopy({
+            targets: [
+                {
+                    src: "js/*",
+                    dest: 'js',
+                },
+                {
+                    src: "img/*",
+                    dest: 'img',
+                },
+            ],
+        }),
+    ]
     // plugins: [
     //     renameIndexPlugin("slides.html")
     // ]
