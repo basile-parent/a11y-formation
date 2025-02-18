@@ -1,19 +1,21 @@
 import path from "path"
-import { defineConfig, Plugin } from "vite"
-import {NormalizedOutputOptions, OutputBundle} from "rollup";
+import { defineConfig } from "vite"
 
-const renameIndexPlugin = (newFilename: string): Plugin | undefined => {
-    if (!newFilename) return
-
-    return {
-        name: "renameIndex",
-        enforce: "post",
-        generateBundle: (_: NormalizedOutputOptions, bundle: OutputBundle) => {
-            const indexHtml = bundle["index.html"]
-            indexHtml.fileName = newFilename
-        },
-    }
-}
+// import { defineConfig, Plugin } from "vite"
+// import {NormalizedOutputOptions, OutputBundle} from "rollup"
+//
+// const renameIndexPlugin = (newFilename: string): Plugin | undefined => {
+//     if (!newFilename) return
+//
+//     return {
+//         name: "renameIndex",
+//         enforce: "post",
+//         generateBundle: (_: NormalizedOutputOptions, bundle: OutputBundle) => {
+//             const indexHtml = bundle["index.html"]
+//             indexHtml.fileName = newFilename
+//         },
+//     }
+// }
 
 export default defineConfig({
     root: path.resolve(__dirname, "src/slides"),
