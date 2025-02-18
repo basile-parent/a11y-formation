@@ -31,7 +31,7 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v4
         with:
-          key: cache-dist-for-deploy
+          key: cache-dist-and-node-modules-for-deploy
           path: |
             ~/dist
             ~/node_modules
