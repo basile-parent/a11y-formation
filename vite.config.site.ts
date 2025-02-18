@@ -3,7 +3,7 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
     root: path.resolve(__dirname, "src/site"),
-    base: "/a11y-formation/",
+    base: "/",
     build: {
         outDir: '../../dist',
         emptyOutDir: true,

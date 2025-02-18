@@ -17,12 +17,12 @@ const renameIndexPlugin = (newFilename: string): Plugin | undefined => {
 
 export default defineConfig({
     root: path.resolve(__dirname, "src/slides"),
-    base: "/a11y-formation/",
+    base: "/slides/",
     build: {
-        outDir: "../../dist",
+        outDir: "../../dist/slides",
         emptyOutDir: true,
     },
-    plugins: [
-        renameIndexPlugin("slides.html")
-    ]
+    // plugins: [
+    //     renameIndexPlugin("slides.html")
+    // ]
 })
