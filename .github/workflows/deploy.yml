@@ -39,8 +39,6 @@ jobs:
         run: npm ci
       - name: Build site
         run: npm run build:site
-      - name: Build slides
-        run: npm run build:slides
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Deploy
