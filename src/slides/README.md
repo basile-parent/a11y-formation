@@ -84,7 +84,7 @@ Compiled files are in the [css/themes](css/themes) folder for themes and in the 
 Every file is also available in a non-minified version. This lets you change or create your own CSS without using a post-processor.
 
 ## Automation with Grunt
-A minimal Grunt configuration is also available for CSS compilation. 4 modules are configured in [Gruntfile.js](Gruntfile.js):
+A minimal Grunt configuration is also available for CSS compilation. 4 modules are configured in [Gruntfile.cjs](Gruntfile.cjs):
 
 *   [grunt-myth](https://www.npmjs.com/package/grunt-myth): to compile CSS;
 *   [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin): to minify CSS;

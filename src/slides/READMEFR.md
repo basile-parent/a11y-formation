@@ -79,7 +79,7 @@ Les fichiers sont compilés dans le dossier [css/themes](css/themes) pour les th
 Tous les fichiers sont également proposés dans une version non minifiée pour vous permettre de modifier ou créer vos propres feuilles CSS sans passer par un post-processeur.
 
 ## Automatisation avec Grunt
-Une configuration minimale Grunt est à votre disposition également pour la compilation des fichiers css. Les 4 modules configurés dans [Gruntfile.js](Gruntfile.js) :
+Une configuration minimale Grunt est à votre disposition également pour la compilation des fichiers css. Les 4 modules configurés dans [Gruntfile.cjs](Gruntfile.cjs) :
 
 - grunt-myth : pour compiler au format CSS ;
 - grunt-contrib-cssmin : pour minifier le css ;
