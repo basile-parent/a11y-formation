@@ -28,6 +28,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          key: cache-dist-for-deploy
+          path: ~/dist
+      - name: Cleanup build folder
+        run: |
+          rm -rf ~/dist
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
@@ -39,6 +47,8 @@ jobs:
         run: npm ci
       - name: Build site
         run: npm run build:site
+      - name: Build slides
+        run: npm run build:slides
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Deploy
