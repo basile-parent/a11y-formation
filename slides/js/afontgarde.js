@@ -21,9 +21,8 @@
 		// See https://github.com/typekit/webfontloader/blob/master/src/core/fontruler.js#L41
 		style = [
 			'display:block',
-			'position:absolute',
-			'top:-999px',
-			'left:-999px',
+			'position:fixed',
+			'top:-10000em',
 			'font-size:300px',
 			'width:auto',
 			'height:auto',
@@ -34,7 +33,7 @@
 			'white-space:nowrap',
 			'font-family:%s'
 		].join(';'),
-		html = '<div style="' + style + '">' + TEST_STRING + '</div>';
+		html = '<div aria-hidden="true" style="' + style + '">' + TEST_STRING + '</div>';
 
 	var FontFaceOnloadInstance = function() {
 		this.appended = false;
@@ -79,6 +78,7 @@
 
 		if( !parent ) {
 			parent = that.parent = doc.createElement( 'div' );
+			parent.setAttribute('style','max-width:100%');
 		}
 
 		parent.innerHTML = html.replace(/\%s/, SANS_SERIF_FONTS ) + html.replace(/\%s/, SERIF_FONTS );
