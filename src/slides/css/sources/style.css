@@ -21,3 +21,5 @@
 @import url('partials-slides/_contrast.css');
 @import url('partials-slides/_acc-notes.css');
 @import url('partials-slides/_animation.css');
+
+@import url('slides.css');

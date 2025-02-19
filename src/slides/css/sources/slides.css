@@ -1,0 +1,59 @@
+#presentation #mute-overlay {
+    position: absolute;
+    top: 65%;
+    left: 65%;
+    width: 15%;
+}
+
+/* --------------------------- */
+
+.summary ol {
+    text-align: left;
+    list-style: none;
+    counter-reset: summary-counter;
+
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.summary ol li {
+    counter-increment: summary-counter;
+}
+
+.summary ol li::before {
+    content: counter(summary-counter) ". ";
+    color: red;
+    font-weight: bold;
+}
+
+/* --------------------------- */
+
+#definition__handicap .content {
+    display: grid;
+    gap: 1em;
+}
+
+#definition__handicap .content h3 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#definition__handicap .content img {
+    grid-column: 1;
+    grid-row: 1;
+    box-sizing: border-box;
+    height: 10vh;
+    margin-bottom: 1em;
+}
+
+/* --------------------------- */
+
+#disabilityTypes img {
+    height: 60vh;
+    max-width: 90vw;
+    object-fit: contain;
+}
+
+/* --------------------------- */
+

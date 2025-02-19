@@ -3,12 +3,12 @@
     "short_name": "Formation a11y dev",
     "icons": [
         {
-            "src": "/img_slide/accessibility-icon.png",
+            "src": "/img_slide/favicon.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/img_slide/accessibility-icon.png",
+            "src": "/img_slide/favicon.png",
             "sizes": "256x256",
             "type": "image/png"
         }

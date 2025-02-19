@@ -35,10 +35,10 @@
 	<link rel="stylesheet" href="css/patch.css" type="text/css" media="screen" />
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="img_slide/accessibility-icon.png" />
-	<link rel="icon" type="image/png" href="img_slide/accessibility-icon.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="img_slide/favicon.png" />
+	<link rel="icon" type="image/png" href="img_slide/favicon.png" />
 	<link rel="manifest" href="site.webmanifest" />
-	<link rel="mask-icon" href="accessibility-icon.png" color="#0b1b34" />
+	<link rel="mask-icon" href="favicon.png" color="#0b1b34" />
 	<meta name="msapplication-TileColor" content="#0b1b34" />
 	<meta name="theme-color" content="#0b1b34" />
 
@@ -62,7 +62,8 @@
 
 			<main role="main" id="main" class="a42-main a42-edito">
 
-				<section class="slide a42-page-full a42-bgcolor-c4a a42-couv a42-couv-start">
+				<!-- Slide Couverture -->
+				<section class="slide a42-page-full a42-bgcolor-c0 a42-couv a42-couv-start">
 					<div class="inside a42-align-center center">
 						<div class="a42-block">
 							<h1 class="a42-couv_title">
@@ -78,6 +79,11 @@
     							Dernière mise à jour : Fév. 2025
 							</p>
 						</div>
+
+						<p id="webcam-instruction">
+							<img src="img/webcam.png" alt="" />
+							Pensez à allumer votre webcam
+						</p>
 					</div>
 				</section>
 
@@ -89,111 +95,184 @@
 							<ul class="a42-list-reset">
 								<li>Qui êtes-vous&nbsp;?</li>
 								<li>Quel est votre niveau de connaissance de l’accessibilité numérique&nbsp;?</li>
-								<li>Qu’attendez-vous de cette formation&nbsp;?</li>
 							</ul>
 						</div>
 					</div>
 				</section>
 
-				<!-- Slide équipe -->
-				<section class="slide a42-page-full a42-bgcolor-c9">
-					<div class="inside a42-align-center">
-						<div class="a42-block a42-block-left a42-block-50">
-							<h2>Access42</h2>
-							<ul>
-								<li><b>Coopérative (SCOP) et entreprise solidaire d’utilité sociale (ESUS), spécialisée en accessibilité numérique.</b></li>
-								<li>Accompagnement, conseil, audit et formation.</li>
-								<li>Rédaction de référentiels (<abbr title="Référentiel général d’accessibilité pour les administrations">RGAA</abbr> 3, <abbr title="Référentiel d’évaluation de l’accessibilité des applications mobiles">RAAM</abbr>, <abbr title="Référentiel d’évaluation de l’accessibilité des documents au format PDF">RAPDF</abbr>, <abbr title="Référentiel d’Évaluation de l’Accessibilité Web">RAWeb</abbr>, etc.).</li>
-								<li>Ressources et outils sous licence libre.</li>
-							</ul>
-						</div>
-					</div>
-				</section>
+				<!-- Slide Qui suis-je ? -->
+				<section class="slide a42-page-full">
+					<div class="a42-page-half-vertical" id="presentation">
+						<div class="a42-page-half-vertical_col a42-bgcolor-c9 a42-align-center-y">
+							<div class="a42-block">
+								<h2>Qui suis-je</h2>
+								<ul>
+									<li>Développeur Full Stack</li>
+									<li>Auditeur accessibilité</li>
+									<li class="a42-text-small">(ancien) Scrum Master</li>
+								</ul>
 
-				<!-- Slide Programme 5j-->
-				<section class="slide a42-page-full a42-bgcolor-c4a">
-					<div class="inside a42-align-center">
-						<div class="a42-block a42-block-maxi">
-							<h2 class="center">Programme</h2>
-							<div class="a42-cols a42-content-limit">
-								<div class="col-1-3">
-									<h3 class="a42-color-c5">Jour 1</h3>
-									<ol>
-										<li>Découvrir l’accessibilité numérique</li>
-										<li>Images</li>
-										<li>Cadres</li>
-										<li>Couleurs</li>
-									</ol>
-								</div>
-								<div class="col-1-3">
-									<h3 class="a42-color-c5">Jour 2</h3>
-									<ol>
-										<li>Éléments obligatoires</li>
-										<li>Présentation de l’information</li>
-										<li>Tableaux</li>
-										<li>Structuration de l’information</li>
-									</ol>
-								</div>
-								<div class="col-1-3">
-									<h3 class="a42-color-c5">Jour 3</h3>
-									<ol>
-										<li>Multimédia</li>
-										<li>Consultation</li>
-										<li>Liens</li>
-										<li>Navigation</li>
-									</ol>
-								</div>
-								<div class="col-1-3">
-									<h3 class="a42-color-c5">Jour 4</h3>
-									<ol>
-										<li>Formulaires</li>
-										<li>Scripts</li>
-										<li>ARIA</li>
-									</ol>
-								</div>
-								<div class="col-1-3">
-									<h3 class="a42-color-c5">Jour 5</h3>
-									<ol>
-										<li>Audit complet d’une page</li>
-									</ol>
-								</div>
-								<div class="col-1-3"></div>
+								<p>
+									Si vous avez des questions après la formation:
+									<a href="mailto:bparent@atecna.fr">bparent@atecna.fr</a>
+								</p>
+							</div>
+						</div>
+						<div class="a42-page-half-vertical_col a42-align-center">
+							<div class="a42-block">
+								<img src="img_slide/intro/deaf.png" alt="Je suis malendant" />
+								<img src="img_slide/intro/mute.png" alt="J'ai des problèmes de voix" id="mute-overlay" />
 							</div>
 						</div>
 					</div>
 				</section>
 
+				<!-- Slide Sommaire jour 1 -->
+				<section class="slide a42-page-full a42-bgcolor-c4a summary">
+					<div class="inside a42-align-center">
+						<div class="a42-block a42-block-maxi">
+							<h2 class="center">Sommaire - Journée 1</h2>
+							<div class="center">
+								<ol class="a42-align-center">
+									<li>Quelques définitions</li>
+									<li>Les outils</li>
+									<li>1. Images</li>
+									<li>2. Cadres</li>
+									<li>3. Couleurs</li>
+									<li>8. Eléments obligatoires</li>
+									<li>10. Présentation de l'information</li>
+									<li>5. Tableau</li>
+									<li>9. Structuration de l'information</li>
+									<li>4. Multimédia</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide Sommaire jour 2 -->
+				<section class="slide a42-page-full a42-bgcolor-c4a summary">
+					<div class="inside a42-align-center">
+						<div class="a42-block a42-block-maxi">
+							<h2 class="center">Sommaire - Journée 2</h2>
+							<div class="center">
+								<ol class="a42-align-center">
+									<li>6. Liens</li>
+									<li>7. Scripts</li>
+									<li>12. Navigation</li>
+									<li>13. Consultation</li>
+									<li>11. Formulaire</li>
+									<li>Comment interpréter un audit ?</li>
+									<li>Question ?</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide Quelques définitions -->
 				<section class="slide a42-page-full a42-page-border a42-border-c7 a42-bgcolor-c9">
 					<div class="inside a42-align-center center">
 						<div class="a42-block">
-							<h2 class="a42-title-chapter">Découvrir l’accessibilité numérique</h2>
-							<p class="a42-subtitle">Enjeux humains, contexte technique et juridique.</p>
+							<h2 class="a42-title-chapter">Quelques définitions</h2>
 						</div>
 					</div>
 				</section>
 
-				<section class="slide a42-page-full">
-					<div class="a42-page-half-vertical">
-						<div class="a42-page-half-vertical_col a42-bgcolor-c4a a42-align-center-y">
-							<div class="a42-block">
-								<h3>L’accessibilité, un droit fondamental</h3>
-								<blockquote>
-									<p class="a42-text">Par personnes handicapées on entend des personnes qui présentent des incapacités physiques, mentales, intellectuelles ou sensorielles durables dont <strong>l’interaction avec diverses barrières peut faire obstacle à leur pleine et effective participation à la société sur la base de l’égalité avec les autres</strong>.&nbsp;»</p>
-									<cite class="a42-text">Article premier — Convention relative aux droits des personnes handicapées de l’ONU (13 décembre 2006)</cite>
-								</blockquote>
-								<p>Ratifiée par <b class="a42-color-c5">plus de 180 États</b>.</p>
-							</div>
+				<!-- Slide Définition handicap -->
+				<section class="slide a42-page-full a42-page-border a42-border-c1 a42-bgcolor-c7">
+					<div class="inside a42-align-center center" id="definition__handicap">
+						<div class="a42-block content">
+							<h3 class="a42-subtitle">
+								<span class="a42-fancy-under">
+									Définissons le handicap
+								</span>
+							</h3>
+
+							<img src="img_slide/favicon.png" alt="" />
+
+							<p>
+								Limitation d’activité ou restriction de la participation à la vie en société subie par
+								une personne en raison d’une altération d’une fonction ou d’un trouble de santé invalidant.
+							</p>
+
+							<p class="big a42-color-c5 Cmasque">
+								<strong>Nous sommes TOUS concernés.</strong>
+							</p>
 						</div>
-						<div class="a42-page-half-vertical_col a42-align-center center">
+					</div>
+				</section>
+
+				<!-- Slide Nuance définition handicap -->
+				<section class="slide a42-page-full a42-page-border a42-border-c1 a42-bgcolor-c7">
+					<div class="a42-page-half-vertical" id="definition__nuance">
+						<div class="a42-page-half-vertical_col a42-bgcolor-c1 a42-align-center-y">
 							<div class="a42-block">
-								<div>
-									<img src="img_slide/sensibilisation/convention-onu.png" alt="" />
-								</div>
-								<p class="a42-margin-t1">
-									<a href="https://www.ohchr.org/fr/instruments-mechanisms/instruments/convention-rights-persons-disabilities">Texte intégral de la
-										<br />Convention relative aux droits des personnes handicapées</a>
+								<h3 class="sr">Nuance</h3>
+								<p class="big"><strong>Cette définition est à nuancer</strong></p>
+
+								<p class="big">
+									C’est le manque d’adaptation qui crée la limitation,
+									pas le handicap.
+								</p>
+								<p class="big">
+									Avant d’être une obligation légale, l’accessibilité est
+									avant tout un devoir moral.
 								</p>
 							</div>
+						</div>
+						<p class="sr">Quelques exemples d'adaptation ratés pour l'accessibilité</p>
+						<div class="a42-page-half-horizontal_col a42-align-center" id="definition__nuance--examples">
+							<img src="img_slide/definitions/accessibility-fail-1.jpg" alt="Une rampe d'accès pour fauteuils roulants avec 2 marches à la fin" class="flex-1" />
+							<img src="img_slide/definitions/accessibility-fail-2.jpg" alt="Du braille imprimé sur une feuille plate" class="flex-1" />
+							<img src="img_slide/definitions/accessibility-fail-3.jpg" alt="Une rampe d'accès pour fauteuils roulants avec une pente hallucinante" class="flex-1" />
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide Handicap en France -->
+				<section class="slide a42-page-full a42-page-border a42-border-c1 a42-bgcolor-c7">
+					<div class="inside a42-align-center">
+						<div class="a42-block">
+							<h3 class="a42-title-statement">Le handicap en France</h3>
+							<div class="a42-cols a42-margin-t1">
+								<div class="col-1-3" id="disability_stats">
+									<p id="disability_stats_title">Dans une salle de 300 personnes</p>
+									<ul class="a42-list-reset" aria-labelledby="disability_stats_title">
+										<li>1 aveugle</li>
+										<li>6 personnes malvoyantes</li>
+										<li>23 personnes sourdes / malentendantes</li>
+										<li>15 daltoniens</li>
+										<li>30 dyslexiques</li>
+										<li>17 troubles de la motricité</li>
+										<li>23 handicaps mentaux</li>
+									</ul>
+								</div>
+								<div class="col-2-3">
+									<img src="img_slide/definitions/disability-stats.jpg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide Types de handicap -->
+				<section class="slide a42-page-full a42-page-border a42-border-c1 a42-bgcolor-c7">
+					<div class="inside a42-align-center center" id="disabilityTypes">
+						<div class="a42-block">
+							<h3>Types de handicap</h3>
+							<img src="img_slide/definitions/disability-types.png" alt="" />
+						</div>
+					</div>
+				</section>
+
+				<!-- Slide Technologie d'assistance (quiz) -->
+				<section class="slide a42-page-full a42-page-border a42-border-c7 a42-bgcolor-c9">
+					<div class="inside a42-align-center center">
+						<div class="a42-block">
+							<h2 class="a42-title-chapter">Technologies d'assistance</h2>
+							<p>Que pouvez-vous me citer comme technologie d’assistance ?</p>
+							<p class="small">(pour l'accessibilité numérique)</p>
 						</div>
 					</div>
 				</section>

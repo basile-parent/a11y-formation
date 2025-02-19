@@ -6,19 +6,19 @@
 :root{
 	--atecna-color: #F36858;
 
-	--c0:#fff;								/* c0 : blanc */
-	--c1:#0B1B34;							/* c1 : bleu outremer */
-	--c2:#343643;							/* c2 : gris anthracite */
-	--c3:#A0B0BD;							/* c3 : bleu moyen */
-	--c4:#CEDAE6;							/* c4 : bleu ciel*/
-	--c5: color(var(--atecna-color) b(50%) saturation(80%)); 							/* c5 : rouge cramoisi */
-	--c6:#F2EBC7;							/* c6 : sable */
-	--c7:#f9fcff; 							/* c7 : blanc cassé */
-	--c8:#7d829a; 							/* c8 : bleu orage */
-	--c9:#31486e; 							/* c9 : bleu argentin */
+	--c0: #fff;
+	--c1: #031f49;
+	--c2: #2b3350;
+	--c3: #aed0d1;
+	--c4: #b9cbdd;
+	--c5: color(var(--atecna-color) b(50%) saturation(80%));
+	--c6: #f1e789;
+	--c7:#f9fcff;
+	--c8:#7d829a;
+	--c9: #2a4883;
 
-	--c2a:#272831;							/* c2 complémentaire */
-	--c4a:#e3ebf2; 							/* c4 à 50 % d’opacité */
+	--c2a:#272831;
+	--c4a:#e3ebf2;
 
 	/* More colors */
 	--hljs: color(var(--c8) shade(70%)); 	/* custom background-color for .hljs elements */

@@ -587,11 +587,11 @@ html {
 	height: 100%;
 	max-width: 100%;
 	overflow: hidden;
-	font-family: helvetica,sans-serif;
+	font-family: helvetica, sans-serif;
 }
 
 body {
-	height: 100%!important;
+	height: 100% !important;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -798,7 +798,7 @@ svg.alignright,
 .fullscreen .main-header {
 	width: 100%;
 	z-index: 900;
-	top: 0!important;
+	top: 0 !important;
 }
 
 .modeplan .main-header {
@@ -928,7 +928,7 @@ main {
 	display: none;
 }
 
-[data-effect="Eno"]  .slide.active {
+[data-effect="Eno"] .slide.active {
 	display: block;
 }
 
@@ -1582,11 +1582,70 @@ body.dys-l .help-info * {
 	background: red;
 }
 
+#presentation #mute-overlay {
+	position: absolute;
+	top: 65%;
+	left: 65%;
+	width: 15%;
+}
+
+/* --------------------------- */
+
+.summary ol {
+	text-align: left;
+	list-style: none;
+	counter-reset: summary-counter;
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+}
+
+.summary ol li {
+	counter-increment: summary-counter;
+}
+
+.summary ol li::before {
+	content: counter(summary-counter) ". ";
+	color: red;
+	font-weight: bold;
+}
+
+/* --------------------------- */
+
+#definition__handicap .content {
+	display: grid;
+	gap: 1em;
+}
+
+#definition__handicap .content h3 {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+#definition__handicap .content img {
+	grid-column: 1;
+	grid-row: 1;
+	box-sizing: border-box;
+	height: 10vh;
+	margin-bottom: 1em;
+}
+
+/* --------------------------- */
+
+#disabilityTypes img {
+	height: 60vh;
+	max-width: 90vw;
+	-o-object-fit: contain;
+	object-fit: contain;
+}
+
+/* --------------------------- */
+
 @media screen and (max-device-width: 480px) {
 
 #full-screen-button,
 #Fgo {
-	display: none!important;
+	display: none !important;
 }
 
 }
@@ -2324,16 +2383,16 @@ main {
 @media screen and (max-width: 29.99em) {
 
 /*.main-header a{
-			width:50px;
-		}*/
+        width:50px;
+    }*/
 
 .main-header img {
 	width: 100%;
 }
 
 /*.main-header h1{
-			left:-10px
-		}*/
+        left:-10px
+    }*/
 
 #wrapper {
 	max-width: 95%;
