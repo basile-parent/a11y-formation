@@ -1,13 +1,12 @@
 module.exports = function (grunt) {
-
     grunt.initConfig({
-
         myth: {
             dist: {
                 files: {
                     'css/style.css': 'css/sources/style.css',
-                    'css/themes/default.css': 'css/sources/themes/default.css',
-                    'css/themes/black.css': 'css/sources/themes/black.css',
+                    'css/print.css': 'css/sources/print.css',
+                    'css/theme.css': 'css/sources/theme.css',
+                    'css/transcription.css': 'css/sources/transcription.css',
                 }
             }
         },
@@ -16,8 +15,9 @@ module.exports = function (grunt) {
             dist: {
                 files: {
                     'css/style.css': 'css/style.css',
-                    'css/themes/default.css': 'css/themes/default.css',
-                    'css/themes/black.css': 'css/themes/black.css',
+                    'css/print.css': 'css/print.css',
+                    'css/theme.css': 'css/theme.css',
+                    'css/transcription.css': 'css/transcription.css',
                 }
             },
         },
@@ -27,11 +27,14 @@ module.exports = function (grunt) {
             dist: {
                 files: {'css/style.min.css': 'css/style.css',}
             },
-            theme: {
-                files: {'css/themes/default.min.css': 'css/themes/default.css'}
+            print: {
+                files: {'css/print.min.css': 'css/print.css',}
             },
-            black: {
-                files: {'css/themes/black.min.css': 'css/themes/black.css'}
+            theme: {
+                files: {'css/theme.min.css': 'css/theme.css'}
+            },
+            theme: {
+                files: {'css/transcription.css': 'css/transcription.css'}
             },
 
         },

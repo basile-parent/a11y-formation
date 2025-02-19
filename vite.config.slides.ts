@@ -37,12 +37,16 @@ export default defineConfig({
                     dest: "img",
                 },
                 {
-                    src: "css/highlight/highlight.pack.js",
-                    dest: "css/highlight",
+                    src: "highlight/highlight.pack.js",
+                    dest: "highlight",
                 },
                 {
                     src: "css/fonts/*",
-                    dest: "fonts",
+                    dest: "assets/fonts",
+                },
+                {
+                    src: "lang/*",
+                    dest: "lang",
                 },
             ],
         }),

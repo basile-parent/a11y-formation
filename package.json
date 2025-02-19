@@ -7,7 +7,7 @@
     "dev:site": "vite ./src/site",
     "dev:slides": "run-p slides:*",
     "slides:grunt": "grunt --base src/slides --gruntfile src/slides/Gruntfile.cjs watch",
-    "slides:dev": "vite ./src/slides",
+    "slides:dev": "live-server src/slides --no-browser",
     "build": "run-s build:site build:slides",
     "build:site": "tsc && vite build -c vite.config.site.ts",
     "build:slides": "grunt --base src/slides --gruntfile src/slides/Gruntfile.cjs && vite build -c vite.config.slides.ts",
