@@ -32,7 +32,16 @@ header[role=banner] {
 
   a {
     color: #252525;
-    border-color: #252525;
+    border-color: #252525
+  }
+
+  .promo-ticket {
+    margin-top: 60px;
+
+    img {
+      max-height: 200px;
+      max-width: 100%;
+    }
   }
 }
 
@@ -53,6 +62,14 @@ header[role=banner] {
       &.timePartLabel {
         font-size: 0.7rem;
       }
+    }
+  }
+  
+  .omega-clock {
+    text-align: center;
+
+    img {
+      height: 100px;
     }
   }
 }
