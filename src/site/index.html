@@ -202,7 +202,7 @@
                                 ouverture de
                                 porte</p>
                             <div class="text-center">
-                                <a href="#" type="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                <a href="#" type="button" class="btn btn-primary">
                                     Acheter
                                 </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
@@ -227,7 +227,7 @@
                             <p class="card-title">Mascotte pince sac Paralympiques Paris 2024 10cm</p>
                             <p class="card-text flex-1">Pour accrocher fièrement à votre sac à dos stabiloté "Korn"</p>
                             <div class="text-center">
-                                <button class="btn btn-primary" disabled onClick="openDialog('cartModal'); return false;">
+                                <button class="btn btn-primary" disabled>
                                     Acheter
                                 </button>
                                 <p>Stock: <img src="assets/shop/red-light.png" alt="Rupture" class="stock-icon" title="Rupture" /></p>
@@ -250,7 +250,7 @@
                             <p class="card-title">Lunettes tricolores Tour Eiffel - Taille unique</p>
                             <p class="card-text flex-1">Soyez branché, patriote ET à l'abri de la cataracte</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                <a href="#" role="button" class="btn btn-primary">
                                     Acheter
                                 </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
@@ -276,7 +276,7 @@
                                 tendance du
                                 moment</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                <a href="#" role="button" class="btn btn-primary">
                                     Acheter
                                 </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
@@ -304,7 +304,7 @@
                                 de
                                 cerf empaillée et les cendres de mamie.</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                <a href="#" role="button" class="btn btn-primary">
                                     Acheter
                                 </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
@@ -462,8 +462,8 @@
                 <p>Êtes-vous sûr de vouloir ajouter cet article à votre panier ?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" onClick="showCartConfirm(); closeDialog('cartModal');">Ajouter au panier</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="closeDialog('cartModal');">Annuler</button>
+                <button type="button" class="btn btn-primary">Ajouter au panier</button>
+                <button type="button" class="btn btn-secondary">Annuler</button>
             </div>
         </div>
     </div>
@@ -484,6 +484,6 @@
 <script type="module" src="ts/main.ts"></script>
 <script type="module" src="ts/countdown.ts"></script>
 <script type="module" src="ts/stats.ts"></script>
-<script src="ts/dialog.ts"></script>
+<script type="module" src="ts/dialog.ts"></script>
 </body>
 </html>

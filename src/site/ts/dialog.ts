@@ -1,4 +1,5 @@
-function openDialog(dialogId: string): void {
+const openDialog = (dialogId: string) => (e: KeyboardEvent): void => {
+    e.preventDefault()
     const dialog = document.getElementById(dialogId)
     if (!dialog) {
         console.log(`No dialog to open found with id ${ dialogId }`)
@@ -8,7 +9,8 @@ function openDialog(dialogId: string): void {
     dialog.classList.add("show")
 }
 
-function closeDialog(dialogId: string): void {
+const closeDialog = (dialogId: string) => (e: KeyboardEvent): void => {
+    e.preventDefault()
     const dialog = document.getElementById(dialogId)
     if (!dialog) {
         console.log(`No dialog to close found with id ${ dialogId }`)
@@ -17,7 +19,23 @@ function closeDialog(dialogId: string): void {
     dialog.classList.remove("show")
 }
 
-function showCartConfirm(): void {
+function showCartConfirm(e: KeyboardEvent): void {
     document.querySelector(".toast")?.classList.add("show");
-    setTimeout(() => document.querySelector(".toast")?.classList.remove("show"), 5000)
+    setTimeout(() => document.querySelector(".toast"), 5000);
+    closeDialog("cartModal")(e)
 }
+
+function initDialogButtons(): void {
+    [...document.querySelectorAll("#shop article .btn-primary")].forEach((button) => {
+        button.addEventListener("click", openDialog("cartModal") as any)
+    });
+    [...document.querySelectorAll("#cartModal .btn-secondary")].forEach((button) => {
+        button.addEventListener("click", closeDialog("cartModal") as any)
+    });
+    
+    [...document.querySelectorAll("#cartModal .btn-primary")].forEach((button) => {
+        button.addEventListener("click", showCartConfirm as any)
+    });
+}
+
+initDialogButtons()
