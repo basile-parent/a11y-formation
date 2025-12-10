@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon--bTVrfG7.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Jeux paralympiques - Lille</title>
-  <script type="module" crossorigin src="/assets/index-1EJSYX-h.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BddBDsQA.css">
+  <script type="module" crossorigin src="/assets/index-CtBRc9aR.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DBS5jOMx.css">
 </head>
 <body>
 
@@ -204,7 +204,9 @@
                                 ouverture de
                                 porte</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" type="button" class="btn btn-primary">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="/assets/green-light-DMA5m0Sa.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -227,9 +229,9 @@
                             <p class="card-title">Mascotte pince sac Paralympiques Paris 2024 10cm</p>
                             <p class="card-text flex-1">Pour accrocher fièrement à votre sac à dos stabiloté "Korn"</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">
+                                <button class="btn btn-primary" disabled>
                                     Acheter
-                                </a>
+                                </button>
                                 <p>Stock: <img src="/assets/red-light-DvUIAnP0.png" alt="Rupture" class="stock-icon" title="Rupture" /></p>
                             </div>
                         </div>
@@ -250,7 +252,9 @@
                             <p class="card-title">Lunettes tricolores Tour Eiffel - Taille unique</p>
                             <p class="card-text flex-1">Soyez branché, patriote ET à l'abri de la cataracte</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" role="button" class="btn btn-primary">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="/assets/green-light-DMA5m0Sa.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -274,7 +278,9 @@
                                 tendance du
                                 moment</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" role="button" class="btn btn-primary">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="/assets/green-light-DMA5m0Sa.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -300,7 +306,9 @@
                                 de
                                 cerf empaillée et les cendres de mamie.</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" role="button" class="btn btn-primary">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="/assets/green-light-DMA5m0Sa.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -442,6 +450,38 @@
         </div>
     </div>
 </footer>
+
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Ajouter au panier</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Êtes-vous sûr de vouloir ajouter cet article à votre panier ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Ajouter au panier</button>
+                <button type="button" class="btn btn-secondary">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast">
+    <div class="toast-header">
+        <strong class="mr-auto">Panier</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Fermer le message">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Article ajouté au panier.
+    </div>
+</div>
 
 </body>
 </html>
