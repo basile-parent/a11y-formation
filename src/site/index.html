@@ -202,7 +202,9 @@
                                 ouverture de
                                 porte</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" type="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -225,9 +227,9 @@
                             <p class="card-title">Mascotte pince sac Paralympiques Paris 2024 10cm</p>
                             <p class="card-text flex-1">Pour accrocher fièrement à votre sac à dos stabiloté "Korn"</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">
+                                <button class="btn btn-primary" disabled onClick="openDialog('cartModal'); return false;">
                                     Acheter
-                                </a>
+                                </button>
                                 <p>Stock: <img src="assets/shop/red-light.png" alt="Rupture" class="stock-icon" title="Rupture" /></p>
                             </div>
                         </div>
@@ -248,7 +250,9 @@
                             <p class="card-title">Lunettes tricolores Tour Eiffel - Taille unique</p>
                             <p class="card-text flex-1">Soyez branché, patriote ET à l'abri de la cataracte</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" role="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -272,7 +276,9 @@
                                 tendance du
                                 moment</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" role="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -298,7 +304,9 @@
                                 de
                                 cerf empaillée et les cendres de mamie.</p>
                             <div class="text-center">
-                                <a href="#" role="button" class="btn btn-primary">Acheter</a>
+                                <a href="#" role="button" class="btn btn-primary" onClick="openDialog('cartModal'); return false;">
+                                    Acheter
+                                </a>
                                 <p>Stock: <img src="assets/shop/green-light.png" alt="Disponible" class="stock-icon" title="Disponible" />
                                 </p>
                             </div>
@@ -441,8 +449,41 @@
     </div>
 </footer>
 
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Ajouter au panier</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Êtes-vous sûr de vouloir ajouter cet article à votre panier ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onClick="showCartConfirm(); closeDialog('cartModal');">Ajouter au panier</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick="closeDialog('cartModal');">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast">
+    <div class="toast-header">
+        <strong class="mr-auto">Panier</strong>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Fermer le message">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        Article ajouté au panier.
+    </div>
+</div>
+
 <script type="module" src="ts/main.ts"></script>
 <script type="module" src="ts/countdown.ts"></script>
 <script type="module" src="ts/stats.ts"></script>
+<script src="ts/dialog.ts"></script>
 </body>
 </html>

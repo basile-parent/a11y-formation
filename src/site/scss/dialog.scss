@@ -1,0 +1,63 @@
+// TODO Use Bootstrap CSS styles
+.modal.show {
+    opacity: 1;
+    display: block;
+    background-color: rgba(100, 100, 100, 0.5);
+
+    height: 100%;
+    width: 100%;
+
+    & .modal-dialog {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+
+        max-width: 80vw;
+
+        color: black;
+
+        & .modal-content {
+            padding: 0.5rem 1.5rem;
+
+            & button.close {
+                position: absolute;
+                top : 0;
+                right : 0;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                margin: 0;
+                font-size: 2.5rem;
+                line-height: 1.5rem;
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+        }
+    }
+}
+
+.toast.show {
+    opacity: 1;
+    display: block;
+    position: fixed; 
+    top: 1rem; 
+    right: 1rem;
+    z-index: 99999;
+
+    & button.close {
+        position: absolute;
+        top : 0;
+        right : 0;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
