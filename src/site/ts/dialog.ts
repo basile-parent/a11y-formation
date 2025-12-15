@@ -21,7 +21,7 @@ const closeDialog = (dialogId: string) => (e: KeyboardEvent): void => {
 
 function showCartConfirm(e: KeyboardEvent): void {
     document.querySelector(".toast")?.classList.add("show");
-    setTimeout(() => document.querySelector(".toast")?.classList.remove("show"), 5000);
+    setTimeout(() => document.querySelector(".toast")?.classList.remove("show"), 2000);
     closeDialog("cartModal")(e)
 }
 
