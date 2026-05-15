@@ -1,3 +1,4 @@
+import "../scss/bootstrap-light.scss"
 import "../scss/style.scss"
 import "../scss/header.scss"
 import "../scss/blog.scss"
@@ -7,8 +8,6 @@ import "../scss/shop.scss"
 import "../scss/form.scss"
 import "../scss/footer.scss"
 import "../scss/dialog.scss"
-
-import "bootstrap"
 
 export const gameDate = initDate()
 

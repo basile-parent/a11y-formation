@@ -1,17 +1,67 @@
 header[role=banner] {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: 0 2rem;
+
   nav {
     height: 4rem;
-  }
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-  .logo {
-    width: 4rem;
-  }
+    ul {
+      display: flex;
+      gap: 15px;
+    }
 
+    #tickets-list {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .logo {
+      flex: 1;
+      text-align: center;
+
+      a {
+        display: inline-block;
+        height: 4rem;
+        width: 4rem;
+
+
+        img {}
+      }
+    }
+  }
+}
+
+.skip-link {
+  color: white;
+  font-size: 1rem;
+  background-color: #444;
+  border: 3px solid white;
+  padding: 0.5rem;
+  position: absolute;
+  top: 5px;
 }
 
 .main-header {
+  position: relative;
   height: 45rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  text-align: center;
 
   &:before {
     content: "";
@@ -26,18 +76,29 @@ header[role=banner] {
     filter: brightness(30%)
   }
 
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
   .lead {
+    margin: 0;
+    font-size: 1.2rem;
     color: #9c9c9c;
   }
 
-  a {
-    color: #252525;
-    border-color: #252525
-  }
+  // a {
+  //   color: #252525;
+  //   border-color: #252525
+  // }
 
   .promo-ticket {
-    margin-top: 60px;
-
     img {
       max-height: 200px;
       max-width: 100%;
@@ -46,25 +107,43 @@ header[role=banner] {
 }
 
 #countDown {
+  text-align: center;
+
+  p {
+    font-weight: bold;
+    margin: 0.25rem 0;
+  }
+
   .countDownTitle {
     font-size: 1.5rem;
   }
+
   .countDownDate {
     font-size: 1.3rem;
   }
 
   table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+
     .timePart {
       &.timePartValue {
         font-weight: bold;
         font-size: 2rem;
       }
+
       &.timePartLabel {
         font-size: 0.7rem;
       }
+
+      &.separator {
+        padding: 0 0.5rem;
+      }
     }
   }
-  
+
   .omega-clock {
     text-align: center;
 

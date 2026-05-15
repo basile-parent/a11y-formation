@@ -2,22 +2,64 @@
   background: url("/assets/backgrounds/background-3-bands.png") no-repeat center center rgb(9, 51, 128);
   background-size: cover;
   color: white;
+  padding: 1.5rem 3rem;
 
   * {
     border-color: white;
   }
 
-  .col-2 {
-    width: 20%;
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
   }
 
-  @media (min-width: 992px) {
-    .col-lg-2 {
-      width: 20%;
+  article {
+    display: block;
+    width: 20%;
+    flex: 0 0 auto;
+  }
+
+  @media (max-width: 992px) {
+    article:first-child, article:last-child {
+      display: none;
+    }
+
+    article {
+      width: 33%;
+    }
+  }
+
+  #shop-items {
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+
+    &>* {
+      max-width: 100%;
+      padding-right: calc(var(--bs-gutter-x) * .5);
+      padding-left: calc(var(--bs-gutter-x) * .5);
+      margin-top: var(--bs-gutter-y);
     }
   }
 
   .card {
+    height: 100%;
+    color: black;
+    background-color: white;
+
     .card-title {
       font-size: 1.25rem;
       font-weight: 500;
@@ -29,6 +71,20 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      flex: 1;
+    }
+
+    .buy-options {
+      text-align: center;
+
+      p {
+        margin: 0.25rem 0;
+      }
     }
 
     .stock-icon {
@@ -45,13 +101,28 @@
     }
 
     .price {
-      & > span {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background-color: #DDDDDD;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid black;
+      border-radius: 0.25rem;
+      font-weight: bold;
+      font-size: 1rem;
+
+      &>span {
         display: block;
       }
 
       .striked-price {
         text-decoration: line-through;
       }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
     }
   }
 

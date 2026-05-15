@@ -13,6 +13,9 @@
 
   article {
     position: relative;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
 
     &:not(:last-of-type):before {
       content: "";
@@ -29,6 +32,15 @@
     img {
       width: 140px;
       height: 100px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    a {
+      float: right;
     }
   }
 

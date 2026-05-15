@@ -1,5 +1,24 @@
 #form {
+  font-size: 1rem;
+
+  h3 {
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 0;
+  }
+
   table.sponsors-examples {
+    background-color: white;
+
+    caption {
+      color: #707070;
+      caption-side: top;
+      text-align: center;
+    }
+
     td, th {
       border: 1px solid lightgrey;
       padding: 1rem;
@@ -7,6 +26,19 @@
 
     td {
       vertical-align: top;
+    }
+  }
+
+  input, select, textarea {
+    margin-bottom: 1rem;
+  }
+
+  .actions {
+    text-align: center;
+
+    button {
+      padding: .5rem 3.5rem;
+      font-size: 1.1rem;
     }
   }
 
