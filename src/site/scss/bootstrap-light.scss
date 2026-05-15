@@ -16,6 +16,10 @@
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.btn:focus, .btn:focus-visible {
+    outline: 5px solid rgba(13, 110, 253, 0.5);
+}
+
 .btn:disabled {
     --bs-btn-color: #fff;
     --bs-btn-bg: #a8cbff;

@@ -45,7 +45,7 @@
         <p class="lead">
             Suivez les résultats en direct, revivez les victoires, partagez les émotions.
         </p>
-        <a class="btn btn-outline-secondary btn-light" href="#">Plus d'infos</a>
+        <a class="btn btn-outline-secondary btn-light" href="#" tabindex="-1">Plus d'infos</a>
 
         <a href="#" class="promo-ticket">
             <img src="assets/ornaments/promo-tickets.png" alt="" />
@@ -193,8 +193,9 @@
                             </span>
                         </span>
                         <div class="card-body">
-                            <p class="card-title">Porte-clés Jeux Paralympiques de Paris 2024 - Fabriqué en France -
-                                Doré</p>
+                            <p class="card-title" title="Porte-clés Jeux Paralympiques de Paris 2024 - Fabriqué en France - Doré">
+                                Porte-clés Jeux Paralympiques de Paris 2024 - Fabriqué en France - Doré
+                            </p>
                             <p class="card-text">Impressionnez votre moitié en devenant médaille d'or en
                                 ouverture de
                                 porte</p>
@@ -221,7 +222,9 @@
                         </span>
                     </span>
                         <div class="card-body">
-                            <p class="card-title">Mascotte pince sac Paralympiques Paris 2024 10cm</p>
+                            <p class="card-title" title="Mascotte pince sac Paralympiques Paris 2024 10cm">
+                                Mascotte pince sac Paralympiques Paris 2024 10cm
+                            </p>
                             <p class="card-text">Pour accrocher fièrement à votre sac à dos stabiloté "Korn"</p>
                             <div class="buy-options">
                                 <button class="btn btn-primary" disabled>
@@ -244,7 +247,9 @@
                         </span>
                     </span>
                         <div class="card-body d-flex flex-column">
-                            <p class="card-title">Lunettes tricolores Tour Eiffel - Taille unique</p>
+                            <p class="card-title" title="Lunettes tricolores Tour Eiffel - Taille unique">
+                                Lunettes tricolores Tour Eiffel - Taille unique
+                            </p>
                             <p class="card-text flex-1">Soyez branché, patriote ET à l'abri de la cataracte</p>
                             <div class="buy-options">
                                 <a href="#" role="button" class="btn btn-primary">
@@ -268,7 +273,9 @@
                         </span>
                     </span>
                         <div class="card-body">
-                            <p class="card-title">Pin 's de l'équipe paralympique de France</p>
+                            <p class="card-title" title="Pin's de l'équipe paralympique de France">
+                                Pin's de l'équipe paralympique de France
+                            </p>
                             <p class="card-text">Soyez cool et branché grâce à LA reference de l'accessoire
                                 tendance du
                                 moment</p>
@@ -294,8 +301,9 @@
                             </span>
                         </span>
                         <div class="card-body">
-                            <p class="card-title">Médaillon Sport Alphabet Jeux Olympiques Paris 2024 C -
-                                Paracyclisme</p>
+                            <p class="card-title" title="Médaillon Sport Alphabet Jeux Olympiques Paris 2024 C - Paracyclisme">
+                                Médaillon Sport Alphabet Jeux Olympiques Paris 2024 C - Paracyclisme
+                            </p>
                             <p class="card-text">Un excellent ajout à votre maison, se placera idéalement entre
                                 la tête
                                 de
@@ -384,17 +392,25 @@
             </div>
             <div class="form-group">
                 <p>Type de partenariat</p>
-                <select class="form-select" id="partnership-type" size="5">
-                    <option selected>Choisissez un type de partenariat</option>
+                <select class="form-select" id="partnership-type" size="8">
+                    <option disabled="disabled">-- Partenariat commercial</option>
                     <option value="platinium">Platinium</option>
                     <option value="premium">Premium</option>
                     <option value="gold">Gold</option>
                     <option value="buvette">Buvette PMU</option>
+                    <option disabled="disabled">-- Partenariat caritatif</option>
+                    <option value="asso">Association d'utilité publique</option>
+                    <option value="benevolat">Bénévolat</option>
                 </select>
             </div>
             <div class="form-group">
                 <p>Votre message</p>
                 <textarea id="message" rows="3" class="form-control" required="required" size="2000"></textarea>
+            </div>
+            
+            <div id="newsletter" class="form-group">
+                <p>Je souhaite recevoir la newsletter</p>
+                <input type="checkbox" checked="checked" />
             </div>
 
             <div class="actions">
@@ -468,9 +484,9 @@
 
 <div class="toast">
     <div class="toast-header">
-        <strong class="mr-auto">Panier</strong>
+        <strong>Panier</strong>
         <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Fermer le message">
-        <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="toast-body">
